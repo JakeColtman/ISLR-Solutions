@@ -46,4 +46,27 @@ rnorm(50)
 
 set.seed(3)
 y = rnorm(100)
-y
+mean(y)
+var(y)
+sd(y)
+
+### Plotting
+
+plot(x, y, col = "green")
+plot(x, z, col = "blue")
+
+### Sequences
+
+x = seq(1, 5)
+x
+x = seq(- 2 *  pi, 2 * pi, length = 100)  # Generates uniform sequence 
+y = sin(x)
+plot(x, y) # Plot a sin wave
+
+### Contour plots
+
+x = seq(1,10)
+y = seq(1,10)
+z <- outer(x, y)
+z 
+contour(x, y, z)

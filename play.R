@@ -70,3 +70,15 @@ y = seq(1,10)
 z <- outer(x, y)
 z 
 contour(x, y, z)
+
+image(x, y, z)
+persp(x, y, z)
+
+
+### Indexing
+
+A = matrix(1:16, 4, 4)
+A[3,3]
+A
+A[c(1,4), ]
+dim(A[c(1,4), ])

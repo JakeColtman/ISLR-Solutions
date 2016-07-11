@@ -82,3 +82,34 @@ A[3,3]
 A
 A[c(1,4), ]
 dim(A[c(1,4), ])
+
+
+### Loading data
+
+Auto = read.table("Auto.data")
+Auto
+head(Auto)
+
+Auto = read.table("Auto.data", header = TRUE)
+Auto = read.table("Auto.data", header = TRUE, na.strings = "?")
+fix(Auto)
+dim(Auto)
+
+AutoClean = na.omit(Auto)
+
+names(AutoClean)
+AutoClean["name"]
+
+plot(AutoClean$mpg, AutoClean$cylinders)
+
+AutoClean$cylinders = as.factor(AutoClean$cylinders)
+
+plot(AutoClean$cylinders, AutoClean$mpg)
+plot(AutoClean$cylinders , AutoClean$mpg , col ="red", varwidth =T)
+
+attach(AutoClean)
+
+hist(mpg)
+pairs(Auto)
+
+plot(weight, acceleration)
